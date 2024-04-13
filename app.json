@@ -1,0 +1,42 @@
+{
+    "name": "Meembom bot",
+    "description": "A bot that does things",
+    "repository": "https://github.com/iseshu/meembom-bot",
+    "env": {
+        "API_ID": {
+            "description": "Your telegram API ID"
+        },
+        "API_HASH": {
+            "description": "Your telegram API HASH"
+        },
+        "BOT_TOKEN":{
+            "description": "Your telegram bot token"
+        },
+        "LOG_CHANNEL": {
+            "description": "Your log channel id to display"
+        },
+        "ONESIGNAL_APP_ID": {
+            "description": "ONE SIGNAL APP ID"
+        },
+        "ONESIGNAL_API_KEY": {
+            "description": "ONE SIGNAL API KEY"
+        },
+        "DATABASE_URL": {
+            "description": "Your database URL"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "scripts": {
+        "worker": "python worker.py"
+    },
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "standard-1X"
+        }
+    }
+}
