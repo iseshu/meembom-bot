@@ -53,7 +53,7 @@ bot = Client("meembom_bot",
 scheduler = AsyncIOScheduler()
 
 
-scheduler.add_job(do_task,  'interval', minutes=60)
+scheduler.add_job(do_task,  'interval', minutes=30)
 scheduler.start()
 
 if __name__ == '__main__':
